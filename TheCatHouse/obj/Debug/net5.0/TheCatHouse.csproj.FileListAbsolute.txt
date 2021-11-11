@@ -1,0 +1,16 @@
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.csproj.AssemblyReference.cache
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.AssemblyInfoInputs.cache
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.AssemblyInfo.cs
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.csproj.CoreCompileInputs.cache
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.exe
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.deps.json
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.runtimeconfig.json
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.runtimeconfig.dev.json
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.dll
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\ref\TheCatHouse.dll
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\bin\Debug\net5.0\TheCatHouse.pdb
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.dll
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\ref\TheCatHouse.dll
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.pdb
+C:\Users\Tech Louisville\source\repos\TheCatHouse\TheCatHouse\obj\Debug\net5.0\TheCatHouse.genruntimeconfig.cache
