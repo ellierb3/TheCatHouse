@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace TheCatHouse
 {
@@ -8,7 +9,7 @@ namespace TheCatHouse
         static void Main(string[] args)
         {
             Menu();
-            //Console.WriteLine("Hello World!");
+            
         }
         static void Menu()
         {
@@ -29,6 +30,7 @@ namespace TheCatHouse
             {
                 case "1":
                     PerfectMatch();
+
                     break;
                 case "2":
                     int fee = AdoptionCost(3);
@@ -78,6 +80,7 @@ namespace TheCatHouse
             Console.WriteLine("Name a quality you would like in a pet");
             string match = Console.ReadLine();
             Console.WriteLine($"You would like your new best friend to be {match}?");
+            
         }
     }
 }
