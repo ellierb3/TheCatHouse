@@ -29,6 +29,13 @@ namespace TheCatHouse
             {
                 Console.WriteLine("PLaceholderrr");
             }
+            public static void PerfectMatch()
+            {
+            Console.WriteLine("Name a quality you would like in a pet");
+            string match = Console.ReadLine();
+            Console.WriteLine($"You would like your new best friend to be {match}?");
+
+            }
 
     }
 }

@@ -8,19 +8,20 @@ namespace TheCatHouse
     {
         static void Main(string[] args)
         {
-            Menu();
-            
+            Menu();  
         }
         static void Menu()
         {
             Console.Clear();
             Console.WriteLine(titleArt);
             Console.WriteLine("");
-            Console.WriteLine("1. Adoptable Dogs");
-            Console.WriteLine("2. Adoptable Cats");
+            Console.WriteLine("Please press 1, 2, or 3 to select and option below");
+            Console.WriteLine("");
+            Console.WriteLine("1. View list of adoptable cats");
+            Console.WriteLine("2. Filler");
             Console.WriteLine("3. Quit");
             Console.WriteLine("4. Quit");
-            Console.WriteLine("Please select an option from above");
+            
 
             string userselection;
             userselection = Console.ReadLine();
@@ -29,19 +30,20 @@ namespace TheCatHouse
             switch (userselection)
             {
                 case "1":
-                    PerfectMatch();
-
-                    break;
-                case "2":
-                    int fee = AdoptionCost(3);
-                    Console.WriteLine($"The adoption fee for a cat that age would be " + fee + " dollars.");
-                    Console.ReadLine();
-                    break;
-                case "3":
                     Console.Clear();
                     DisplayList();
                     Console.ReadLine();
                     break;
+                case "2":
+                    
+                    Console.WriteLine($"The adoption fee for a cat that age would be dollars.");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Cats.PerfectMatch();
+                    Console.ReadLine();
+                    break;
+                    
                 case "4":
                     Console.Clear();
                     Cats.SortCats();
@@ -67,6 +69,7 @@ namespace TheCatHouse
                 Console.WriteLine($"Name:{cat.Name} Age: {cat.Age} Breed: {cat.Breed}");
             }
         }
+
         public static string titleArt = @"
  _____ _            _____       _     _   _                      
 |_   _| |          /  __ \     | |   | | | |                     
@@ -85,21 +88,6 @@ namespace TheCatHouse
                                                                  
                                                                  
 ";
-        public static int AdoptionCost(int catAge)
-        {
-            Console.WriteLine("To display adoption fees, enter the age of the cat");
-            Console.ReadLine();
-            int cost = catAge;
-            return cost;
-        }
-
-        static void PerfectMatch()
-        {
-            Console.WriteLine("Name a quality you would like in a pet");
-            string match = Console.ReadLine();
-            Console.WriteLine($"You would like your new best friend to be {match}?");
-            
-        }
         
     }
 
