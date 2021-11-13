@@ -14,7 +14,7 @@ namespace TheCatHouse
         static void Menu()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to my app");
+            Console.WriteLine(titleArt);
             Console.WriteLine("");
             Console.WriteLine("1. Adoptable Dogs");
             Console.WriteLine("2. Adoptable Cats");
@@ -50,7 +50,7 @@ namespace TheCatHouse
             }
             Menu();
         }
-        static void DisplayList()
+        public static void DisplayList()
         {
             Console.WriteLine("Here is the list of our adoptable cats");
             Console.WriteLine("");
@@ -67,6 +67,24 @@ namespace TheCatHouse
                 Console.WriteLine($"Name:{cat.Name} Age: {cat.Age} Breed: {cat.Breed}");
             }
         }
+        public static string titleArt = @"
+ _____ _            _____       _     _   _                      
+|_   _| |          /  __ \     | |   | | | |                     
+  | | | |__   ___  | /  \/ __ _| |_  | |_| | ___  _   _ ___  ___ 
+  | | | '_ \ / _ \ | |    / _` | __| |  _  |/ _ \| | | / __|/ _ \
+  | | | | | |  __/ | \__/\ (_| | |_  | | | | (_) | |_| \__ \  __/
+  \_/ |_| |_|\___|  \____/\__,_|\__| \_| |_/\___/ \__,_|___/\___|
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+";
         public static int AdoptionCost(int catAge)
         {
             Console.WriteLine("To display adoption fees, enter the age of the cat");
@@ -82,5 +100,7 @@ namespace TheCatHouse
             Console.WriteLine($"You would like your new best friend to be {match}?");
             
         }
+        
     }
+
 }

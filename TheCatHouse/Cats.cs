@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace TheCatHouse
 {
     public class Cats : Info
-        {
+    {
+        
             public Cats(string catName, int catAge, string catBreed)
             {
                 Name = catName;
@@ -28,5 +29,6 @@ namespace TheCatHouse
             {
                 Console.WriteLine("PLaceholderrr");
             }
-        }
+
+    }
 }
