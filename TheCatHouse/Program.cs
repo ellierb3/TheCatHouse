@@ -8,7 +8,9 @@ namespace TheCatHouse
     {
         static void Main(string[] args)
         {
-            Menu();  
+            
+            Menu();
+            
         }
         static void Menu()
         {
@@ -20,7 +22,7 @@ namespace TheCatHouse
             Console.WriteLine("1. View list of adoptable cats");
             Console.WriteLine("2. Filler");
             Console.WriteLine("3. Quit");
-            Console.WriteLine("4. Quit");
+            
             
 
             string userselection;
@@ -35,23 +37,26 @@ namespace TheCatHouse
                     Console.ReadLine();
                     break;
                 case "2":
+                    Console.Clear();
+                    //Cats.AdoptionEvent();
                     
-                    Console.WriteLine($"The adoption fee for a cat that age would be dollars.");
+                    Console.WriteLine("What gender are you looking for?");
                     Console.ReadLine();
+                   
                     break;
                 case "3":
-                    Cats.PerfectMatch();
-                    Console.ReadLine();
-                    break;
-                    
-                case "4":
                     Console.Clear();
-                    Cats.SortCats();
+                    Console.WriteLine("********************Goodbye********************");
+                    Console.WriteLine("");
+                    Console.WriteLine("**********Press any key to go back to the main menu**********");
                     Console.ReadLine();
-                    break;
+                    break;  
             }
             Menu();
         }
+
+
+
         public static void DisplayList()
         {
             Console.WriteLine("Here is the list of our adoptable cats");
@@ -66,9 +71,18 @@ namespace TheCatHouse
 
             foreach (var cat in cats)
             {
-                Console.WriteLine($"Name:{cat.Name} Age: {cat.Age} Breed: {cat.Breed}");
+                Console.WriteLine($"Name:  {cat.Name}  Age:  {cat.Age}   Breed:  {cat.Breed}");
             }
+
         }
+
+        
+        
+
+
+
+
+
 
         public static string titleArt = @"
  _____ _            _____       _     _   _                      
@@ -88,6 +102,7 @@ namespace TheCatHouse
                                                                  
                                                                  
 ";
+      
         
     }
 
