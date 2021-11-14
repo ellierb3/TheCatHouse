@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace TheCatHouse
 {
     public class Kittens
     {
-
         public string Gender;
         public int AdoptionFee;
         public string KittenName;
@@ -31,7 +31,7 @@ namespace TheCatHouse
         }
         public bool IsAKitten()
         {
-            if (AdoptionFee >= 50)
+            if (AdoptionFee > 50)
             {
                 return true;
             }
