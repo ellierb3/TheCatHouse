@@ -17,14 +17,14 @@ namespace TheCatHouse
         }
 
 
-        public static DateTime today = DateTime.Today;
-        public static DateTime followup = DateTime.Now.AddDays(30);
+        //public static DateTime today = DateTime.Today;
+        //public static DateTime followup = DateTime.Now.AddDays(30);
         
 
-        public static void Checkup()
-        {
-            Console.WriteLine($"If you adopted a cat today on {today} then we would need to do an in home check on {followup}");
-        }
+        //public static void Checkup()
+        //{
+            //Console.WriteLine($"If you adopted a cat today on {today} then we would need to do an in home check on {followup}");
+        //}
 
 
 

@@ -14,8 +14,13 @@ namespace TheCatHouse
         {
             
             Menu();
-            
+            List<string> femalekittens = new List<string>
+            {"Phoebe", "Sailor", "Minnie", "Wren"};
+
+            List<string> malekittens = new List<string>
+            {"Tiny","boyy", "boi"};
         }
+
         static void Menu()
         {
             Console.Clear();
@@ -43,10 +48,9 @@ namespace TheCatHouse
                 case "2":
                     Console.Clear();
                     //Cats.AdoptionEvent();
-                    Cats.Checkup();
-                    Console.WriteLine("Filler text");
+                    //Cats.Checkup();
+                    
                     Console.ReadLine();
-                   
                     break;
                 case "3":
                     Console.Clear();
@@ -77,8 +81,22 @@ namespace TheCatHouse
             }
         }
 
-        
+        //trying to search list for siamese cat.Breed below
+
+        //public static bool DoesIt()
+        //{
+            //if (cats.Contains("Siamese")
+            //{
+                //return true;
+            //}
+        //}
+
+        //another thing i have tried to check the age 2 below
+
         //bool exists = cats.Any(x => x.Age == 2);
+        
+        
+        //tried checking for cat.Breed containing black for black cats below
         //public static string BlackCats()
         //{
             //foreach(string item in cats)
