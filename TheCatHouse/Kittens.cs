@@ -9,29 +9,23 @@ namespace TheCatHouse
 {
     public class Kittens
     {
-        public string Gender;
-        public int AdoptionFee;
-        public string KittenName;
+        public string Gender { get; set; }
+        public int AdoptionFee { get; set; }
+        public string KittenName{ get; set; }
+        
 
 
 
-
-        public Kittens(string kittenName, int TheAdoptionFee, string TheGender)
+        public Kittens(string KittenName, int AdoptionFee, string Gender)
         {
-            this.KittenName = kittenName;
-            this.AdoptionFee = TheAdoptionFee;
-            this.Gender = TheGender;
-
-
-
-            Kittens kitten = new Kittens("Buttercu", 50, "male");
-            Kittens kitten2 = new Kittens("Mocha", 50, "male");
-            Kittens kitten3 = new Kittens("Peanut", 50, "male");
+            Kittens Butter = new Kittens("Butter", 50, "male");
+            Kittens Mocha = new Kittens("Mocha", 50, "male");
+            Kittens Peanut = new Kittens("Peanut", 50, "male");
 
         }
         public bool IsAKitten()
         {
-            if (AdoptionFee > 50)
+            if (AdoptionFee > 40)
             {
                 return true;
             }
