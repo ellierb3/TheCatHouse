@@ -16,17 +16,21 @@ namespace TheCatHouse
             Breed = catBreed;
         }
 
+        
+        
 
         //public static DateTime today = DateTime.Today;
         //public static DateTime followup = DateTime.Now.AddDays(30);
-        
+
 
         //public static void Checkup()
         //{
-            //Console.WriteLine($"If you adopted a cat today on {today} then we would need to do an in home check on {followup}");
+        //Console.WriteLine($"If you adopted a cat today on {today} then we would need to do an in home check on {followup}");
         //}
 
-
+        public static DateTime myBirthday = DateTime.Parse("12/24/1994");
+        public static TimeSpan myAge = DateTime.Now.Subtract(myBirthday);
+        
 
 
 

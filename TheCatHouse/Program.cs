@@ -10,16 +10,13 @@ namespace TheCatHouse
         public static List<Cats> cats = new List<Cats>();
         
         
+
         static void Main(string[] args)
         {
             
             Menu();
-            List<string> femalekittens = new List<string>
-            {"Phoebe", "Sailor", "Minnie", "Wren"};
-
-            List<string> malekittens = new List<string>
-            {"Tiny","boyy", "boi"};
-        }
+            
+    }
 
         static void Menu()
         {
@@ -29,7 +26,7 @@ namespace TheCatHouse
             Console.WriteLine("Please press 1, 2, or 3 to select and option below");
             Console.WriteLine("");
             Console.WriteLine("1. View list of adoptable cats");
-            Console.WriteLine("2. Filler");
+            Console.WriteLine("2. Filler Text");
             Console.WriteLine("3. Quit");
             
             
@@ -47,16 +44,19 @@ namespace TheCatHouse
                     break;
                 case "2":
                     Console.Clear();
-                    //Cats.AdoptionEvent();
-                    //Cats.Checkup();
-                    
+                    //DoesIt();
+                    //Console.WriteLine(Cats.myAge.Days);
+                    //GetKitten();
+                    Console.WriteLine(KindOfCat());
                     Console.ReadLine();
                     break;
                 case "3":
                     Console.Clear();
-                    Console.WriteLine("********************Goodbye********************");
-                    Console.WriteLine("");
-                    Console.WriteLine("**********Press any key to go back to the main menu**********");
+                    //Console.WriteLine("********************Goodbye********************");
+                    //Console.WriteLine("");
+                    //Console.WriteLine("**********Press any key to go back to the main menu**********");
+                    Console.WriteLine(Example());
+                    Console.WriteLine(LastOne());
                     Console.ReadLine();
                     break;  
             }
@@ -68,47 +68,80 @@ namespace TheCatHouse
             Console.WriteLine("Here is the list of our adoptable cats");
             Console.WriteLine("");
             List<Cats> cats = new List<Cats>();
-            cats.Add(new Cats("Barbie", 1, "White"));
+            cats.Add(new Cats("Barbie", 1, "Russian Blue"));
             cats.Add(new Cats("Buttercup", 3, "Siamese"));
-            cats.Add(new Cats("Charlie", 5, "Black"));
-            cats.Add(new Cats("Darth", 4, "Black"));
-            cats.Add(new Cats("Edgar", 2, "Black"));
-            cats.Add(new Cats("Flora", 4, "Black"));
-
+            cats.Add(new Cats("Charlie", 5, "Black Domestic Shorthair"));
+            cats.Add(new Cats("Darth", 4, "Black Domestic Shorthair"));
+            cats.Add(new Cats("Edgar", 2, "Maine Coon"));
+            cats.Add(new Cats("Flora", 4, "Tabby Domestic Shorthair"));
             foreach (var cat in cats)
             {
-                Console.WriteLine($"Name:  {cat.Name}  Age:  {cat.Age}   Breed:  {cat.Breed}");
+                Console.WriteLine($"Name: {cat.Name}\nAge: {cat.Age}\nDescription: {cat.Breed}");
+                Console.WriteLine("");
             }
+            
         }
 
-        //trying to search list for siamese cat.Breed below
+        public static bool KindOfCat()
+        {
+            if (cats.Exists(x => x.Breed.Contains("Siamese")))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static string[] GetKitten()
+        {
+            Kittens susie = new Kittens("Susie", "Female");
+            Kittens pete = new Kittens("Pete", "Male");
+            Kittens[] kitten =
+            {
+                susie,
+                pete
+            };
+            string[] gender = kitten.Select(x => x.KittenGender).ToArray();
+            return gender;
+        }
 
-        //public static bool DoesIt()
-        //{
-            //if (cats.Contains("Siamese")
-            //{
-                //return true;
-            //}
-        //}
+        
 
-        //another thing i have tried to check the age 2 below
 
-        //bool exists = cats.Any(x => x.Age == 2);
+        public static void DoesIt()
+        {
+            List<string> kittens = new List<string>();
+            kittens.Add("Bettie");
+            kittens.Add("Barney");
+            kittens.Add("Cathy");
+
+            Console.WriteLine("Type the name you want to search for");
+            var sandwich = Console.ReadLine();
+            var matchingvalues = kittens.Any(stringToCheck => stringToCheck.Contains(sandwich));
+            Console.WriteLine(matchingvalues);
+        }
+
+        
+
+        public static int Example()
+        {
+            IEnumerable<int> items = new List<int> { 8, 3, 2 };
+            int count = (from x in items where x < 5 select x).Count();
+            return count;
+        }
+        
+        public static int LastOne()
+        {
+            IEnumerable<string> items = new List<string> { "A", "B", "C" };
+            int count = items.Count();
+            return count;
+        }
         
         
-        //tried checking for cat.Breed containing black for black cats below
-        //public static string BlackCats()
-        //{
-            //foreach(string item in cats)
-            //{
-                //if (item.Contains("Black"))
-                //{
-                    //return item;
-                //}
-            //}
-        //}
+        
 
-
+        
         public static string titleArt = @"
  _____ _            _____       _     _   _                      
 |_   _| |          /  __ \     | |   | | | |                     
