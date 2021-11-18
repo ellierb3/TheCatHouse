@@ -20,15 +20,5 @@ namespace TheCatHouse
 
         public override string ToString() => $"{KittenName}, {KittenGender}";
 
-
-
-
-        // public int CalculateAdoptionFee(int a, int b)
-        // {
-        //AdoptionFee = a;
-        // b = 25; 
-        // return a * b;
-        // }
-
     }
 }

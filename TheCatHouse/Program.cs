@@ -7,16 +7,14 @@ namespace TheCatHouse
 {
     class Program
     {
-        public static List<Cats> cats = new List<Cats>();
         
-        
-
         static void Main(string[] args)
         {
-            
+            List<Cats> cats = new List<Cats>();
+            Cats cat1 = new Cats("Barbie", 1, "Russian Blue");
+            cats.Add(cat1);
             Menu();
-            
-    }
+        }
 
         static void Menu()
         {
@@ -26,10 +24,11 @@ namespace TheCatHouse
             Console.WriteLine("Please press 1, 2, or 3 to select and option below");
             Console.WriteLine("");
             Console.WriteLine("1. View list of adoptable cats");
-            Console.WriteLine("2. Filler Text");
-            Console.WriteLine("3. Quit");
-            
-            
+            Console.WriteLine("2. View the number of adoptable kittens.");
+            Console.WriteLine("3. View how often we have met our adoption goal.");
+            Console.WriteLine("4. Calculate post adoption followup.");
+            Console.WriteLine("5. Quit");
+
 
             string userselection;
             userselection = Console.ReadLine();
@@ -39,31 +38,39 @@ namespace TheCatHouse
             {
                 case "1":
                     Console.Clear();
-                    DisplayList();
+                    DisplayListOfCats();
                     Console.ReadLine();
                     break;
                 case "2":
                     Console.Clear();
-                    //DoesIt();
-                    //Console.WriteLine(Cats.myAge.Days);
-                    //GetKitten();
-                    Console.WriteLine(KindOfCat());
+                    Console.WriteLine(HowManyKittens());
                     Console.ReadLine();
                     break;
                 case "3":
                     Console.Clear();
-                    //Console.WriteLine("********************Goodbye********************");
-                    //Console.WriteLine("");
-                    //Console.WriteLine("**********Press any key to go back to the main menu**********");
-                    Console.WriteLine(Example());
-                    Console.WriteLine(LastOne());
+                    Console.WriteLine("For 8 years we have been helping pets find their FURever home.");
+                    Console.WriteLine("We aim to adopt out 250 pets or more every year.");
+                    Console.WriteLine("Some years we are shy of that goal.");
+                    Console.WriteLine("Below is a list of times when we surpassed our goal");
+                    Console.WriteLine("");
+                    YearlyAdoptionGraph();
                     Console.ReadLine();
-                    break;  
+                    break;
+                case "4":
+                    Console.Clear();
+                    FollowUp();
+                    Console.ReadLine();
+                    break;
+                case "5":
+                    Console.Clear();
+                    Environment.Exit(0);
+                    break;
             }
             Menu();
         }
 
-        public static void DisplayList()
+        //This method stores and displays all available adult cats from the List<Cats>
+        public static void DisplayListOfCats()
         {
             Console.WriteLine("Here is the list of our adoptable cats");
             Console.WriteLine("");
@@ -79,66 +86,52 @@ namespace TheCatHouse
                 Console.WriteLine($"Name: {cat.Name}\nAge: {cat.Age}\nDescription: {cat.Breed}");
                 Console.WriteLine("");
             }
-            
         }
 
-        public static bool KindOfCat()
+        //This method returns total number of kittens available for adoption
+        public static int HowManyKittens()
         {
-            if (cats.Exists(x => x.Breed.Contains("Siamese")))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public static string[] GetKitten()
-        {
-            Kittens susie = new Kittens("Susie", "Female");
-            Kittens pete = new Kittens("Pete", "Male");
-            Kittens[] kitten =
-            {
-                susie,
-                pete
-            };
-            string[] gender = kitten.Select(x => x.KittenGender).ToArray();
-            return gender;
-        }
-
-        
-
-
-        public static void DoesIt()
-        {
-            List<string> kittens = new List<string>();
-            kittens.Add("Bettie");
-            kittens.Add("Barney");
-            kittens.Add("Cathy");
-
-            Console.WriteLine("Type the name you want to search for");
-            var sandwich = Console.ReadLine();
-            var matchingvalues = kittens.Any(stringToCheck => stringToCheck.Contains(sandwich));
-            Console.WriteLine(matchingvalues);
-        }
-
-        
-
-        public static int Example()
-        {
-            IEnumerable<int> items = new List<int> { 8, 3, 2 };
-            int count = (from x in items where x < 5 select x).Count();
-            return count;
-        }
-        
-        public static int LastOne()
-        {
-            IEnumerable<string> items = new List<string> { "A", "B", "C" };
+            Console.WriteLine("The number below reflects the number of kittens we currently have available for adoption.");
+            IEnumerable<string> items = new List<string> { "Abel", "Bettie", "Carlisle", "Domino", "Edsel", "Finneas", "Gaia" };
             int count = items.Count();
             return count;
         }
-        
-        
+
+
+        //This method takes the user's adoption date and calculates the followup
+        public static void FollowUp()
+        {
+            Console.WriteLine("We request a brief followup after every pet adoption. Enter the adoption date to calculate your followup.");
+            DateTime adoptionDate;
+          
+            if (DateTime.TryParse(Console.ReadLine(), out adoptionDate))
+            {
+                Console.WriteLine("The followup will be " + adoptionDate.AddDays(21));
+            }
+            else
+            {
+                Console.WriteLine("That is not a correctly formatted date");
+            }
+        }
+
+
+        //This method is used to store the total number of adoptions each year and return instances when totalAdoptions exceeded 250
+        public static void YearlyAdoptionGraph()
+        {
+            // Total number of adopted out animals from each year since start of The Cat House
+            int[] totalAdoptions = new int[] { 57, 92, 255, 243, 288, 305, 297, 317 };
+
+            IEnumerable<int> yearlyAdoptions =
+                from num in totalAdoptions
+                where num > 250
+                select num;
+
+            foreach (int i in yearlyAdoptions)
+            {
+                Console.Write(i + " ");
+            }
+        }
+    
         
 
         
