@@ -15,6 +15,7 @@ namespace TheCatHouse
             Menu();
         }
 
+        //Method for my master loop
         static void Menu()
         {
             Console.Clear();
