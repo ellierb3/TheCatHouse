@@ -7,7 +7,6 @@ namespace TheCatHouse
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
             List<Cats> cats = new List<Cats>();
